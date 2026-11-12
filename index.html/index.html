@@ -1,113 +1,276 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunila Abid | GHL & CRM Specialist</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunila Abid | Junior GoHighLevel (GHL) &amp; CRM Virtual Assistant</title>
+<meta name="description" content="Sunila Abid of Sunila CRM Solutions: Junior GoHighLevel (GHL) and CRM Virtual Assistant in Karachi, Pakistan. Pipelines, forms, calendars, lead tracking and follow-ups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;background:#101010;color:#f5f5f5;line-height:1.7}
-header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333;flex-wrap:wrap}
-.logo{color:#d6ad60;font-size:22px;font-weight:bold}
-nav a{color:#eee;text-decoration:none;margin:0 9px;font-size:14px}
-nav a:hover{color:#d6ad60}
-.hero{padding:100px 8%;text-align:center}
-.hero p{color:#d6ad60;letter-spacing:3px}
-h1{font-size:48px;margin:10px}
-h2{color:#d6ad60;font-size:30px}
-.hero h2{color:white;font-size:25px;font-weight:normal}
-.btn{display:inline-block;background:#d6ad60;color:#111;padding:12px 24px;text-decoration:none;border-radius:4px;margin:10px;font-weight:bold}
-section{padding:65px 10%;border-top:1px solid #292929}
-.muted{color:#bbb}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#1c1c1c;border:1px solid #383838;padding:22px;border-radius:8px}
-.card h3{color:#d6ad60}
-footer{text-align:center;padding:30px;color:#aaa;border-top:1px solid #333}
-ul{padding-left:20px}
-li{margin:7px 0}
-@media(max-width:600px){header{display:block;text-align:center}nav{margin-top:15px}nav a{display:inline-block;margin:5px}h1{font-size:35px}.hero{padding:65px 6%}section{padding:45px 7%}}
+:root{
+  --bg:#F2F5F7; --surface:#FFFFFF; --ink:#14232E; --muted:#51636F; --line:#D5DEE4;
+  --brand:#0E6B63; --brand-ink:#FFFFFF; --signal:#F0A93B; --soft:#E1EEEC; --lost:#F6E3E1;
+  --head:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0F1A22; --surface:#17262F; --ink:#E8EFF3; --muted:#9FB1BC; --line:#2A3C47; --brand:#4FC3B5; --brand-ink:#0F1A22; --soft:#173A38; --lost:#3A2326}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{overflow-wrap:break-word;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0;scroll-margin-top:72px}
+@media(max-width:640px){section{padding:64px 0}}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:40px}
+
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 1.1rem var(--head);text-decoration:none}
+nav{display:flex;gap:22px;font-size:.95rem;align-items:center}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+@media(max-width:640px){header .wrap{height:auto;min-height:56px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap;gap:6px 12px}.logo{font-size:1rem}nav{gap:14px;font-size:.88rem;flex-wrap:wrap}.contact{padding:40px 20px}}
+.cta-s{background:var(--brand);color:var(--brand-ink)!important;padding:6px 14px;border-radius:999px}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.role{color:var(--brand);font-weight:600;margin-bottom:14px}
+.hero h1{font-size:clamp(2.3rem,5.6vw,4.2rem);font-weight:800;max-width:17ch}
+.hero p.intro{color:var(--muted);max-width:58ch;margin:22px 0 30px;font-size:1.15rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--brand)}
+.btn.p{background:var(--brand);color:var(--brand-ink)}
+.btn.s{color:var(--brand)}
+.btn:hover{transform:translateY(-1px)}
+
+/* pipeline board */
+.board{margin-top:56px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.board-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;font-size:.9rem;color:var(--muted)}
+.board-top strong{color:var(--ink);font-family:var(--head)}
+.replay{padding:6px 14px;background:none;font:600 .9rem var(--body);cursor:pointer;border-radius:10px;border:2px solid var(--brand);color:var(--brand)}
+.cols{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.col{background:var(--bg);border-radius:12px;padding:10px;min-height:150px}
+.col h3{font:600 .8rem var(--body);color:var(--muted);margin:2px 2px 10px;letter-spacing:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 10px;font-size:.85rem;margin-bottom:8px}
+.card small{display:block;color:var(--muted);font-size:.75rem}
+.card.live{border-color:var(--signal);box-shadow:0 0 0 3px color-mix(in srgb,var(--signal) 30%,transparent)}
+.col.won{background:var(--soft)}
+.col.lost{background:var(--lost)}
+#log{margin-top:14px;font-size:.9rem;color:var(--muted);min-height:1.4em}
+@media(max-width:900px){.cols{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.cols{grid-template-columns:repeat(2,1fr)}}
+
+.note{margin-top:6px;font-size:.85rem;color:var(--muted)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.about p{color:var(--muted);margin-bottom:14px}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;list-style:none}
+.facts li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.facts li:last-child{border:0}
+.facts span{color:var(--muted)}
+.facts b{text-align:right;font-weight:600}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.skill h3{font-size:1.1rem;margin-bottom:8px}
+.skill p{color:var(--muted);font-size:.95rem}
+
+/* projects */
+.proj{display:grid;grid-template-columns:1fr 1.3fr;gap:36px;padding:34px 0;border-top:1px solid var(--line)}
+.proj:last-child{border-bottom:1px solid var(--line)}
+.proj h3{font-size:1.5rem;margin-bottom:8px}
+.tag{display:inline-block;background:var(--soft);color:var(--brand);font-weight:600;font-size:.8rem;padding:3px 10px;border-radius:999px;margin:0 6px 8px 0}
+.tag.demo{background:var(--signal);color:#14232E;font-weight:700}
+.proj ul{padding-left:1.1rem;color:var(--muted)}
+.proj li{margin-bottom:6px}
+.proj b{color:var(--ink)}
+@media(max-width:760px){.proj{grid-template-columns:1fr;gap:12px}}
+
+/* process */
+.steps{list-style:decimal inside;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.steps li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.steps li::marker{font:700 1.1rem var(--head);color:var(--brand)}
+.steps h3{display:inline;font-size:1.1rem}
+.steps p{display:block;margin-top:6px;color:var(--muted);font-size:.95rem}
+
+/* contact */
+.contact{background:var(--brand);color:var(--brand-ink);border-radius:22px;padding:56px 32px;text-align:center}
+.contact h2{margin-bottom:10px}
+.contact p{max-width:48ch;margin:0 auto 26px;opacity:.92}
+.contact .btn{max-width:100%;overflow-wrap:anywhere;background:var(--brand-ink);color:var(--brand);border-color:var(--brand-ink)}
+.links{margin-top:22px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;font-size:.95rem}
+footer{padding:32px 0;color:var(--muted);font-size:.9rem;text-align:center}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <header>
-<div class="logo">SUNILA ABID</div>
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Sunila CRM Solutions</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Demo projects</a>
+      <a href="#process">How I work</a>
+      <a class="cta-s" href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="hero">
-<p>VIRTUAL ASSISTANT | CRM SUPPORT</p>
-<h1>Sunila Abid</h1>
-<h2>GoHighLevel (GHL) & CRM Specialist</h2>
-<p class="muted">Helping businesses organize leads, manage CRM systems and improve follow-ups.</p>
-<a class="btn" href="#contact">Contact Me</a>
-<a class="btn" href="https://drive.google.com/drive/folders/17KQeTl76iXPZddVIQBDKib1uV4z9ZHf-?usp=sharing">View Portfolio</a>
-</div>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="role">Sunila Abid | Junior GoHighLevel (GHL) &amp; CRM Virtual Assistant</p>
+      <h1>I keep your leads organized and followed up in GoHighLevel.</h1>
+      <p class="intro">I help small businesses manage contacts, pipelines, forms and calendars in GoHighLevel and HubSpot, so no lead gets forgotten. Based in Karachi, Pakistan.</p>
+      <div class="btns">
+        <a class="btn p" href="#work">See demo projects</a>
+        <a class="btn s" href="mailto:workwithsunila@gmail.com">Email me</a>
+      </div>
 
-<section id="about">
-<h2>About Me</h2>
-<p class="muted">I am a Pakistan-based Virtual Assistant with practical experience in GoHighLevel (GHL), CRM support, lead management and prospect research. I have worked on a practical GHL project and created demo projects to strengthen my skills. I am interested in remote and project-based opportunities.</p>
-</section>
+      <div class="board" aria-label="Animated example of a lead moving through the demo HVAC pipeline">
+        <div class="board-top"><strong>HVAC lead pipeline (DEMO)</strong><button class="replay" id="replay" type="button">Replay</button></div>
+        <div class="cols">
+          <div class="col"><h3>New Lead</h3></div>
+          <div class="col"><h3>Contacted</h3></div>
+          <div class="col"><h3>Appointment Booked</h3></div>
+          <div class="col"><h3>Job Completed</h3></div>
+          <div class="col won"><h3>Closed Won</h3></div>
+          <div class="col lost"><h3>Closed Lost</h3></div>
+        </div>
+        <p id="log" role="status" aria-live="polite"></p>
+        <p class="note">This is a DEMO with made-up sample data. No real customers, leads or payments are shown.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="skills">
-<h2>Skills & Tools</h2>
-<div class="cards">
-<div class="card"><h3>GoHighLevel</h3><p class="muted">Pipelines, forms, calendars, workflows, triggers, filters and follow-ups.</p></div>
-<div class="card"><h3>CRM Support</h3><p class="muted">HubSpot, lead organization, contact updates and pipeline management.</p></div>
-<div class="card"><h3>Lead Generation</h3><p class="muted">B2B prospect research, list building, data cleaning and outreach tracking.</p></div>
-<div class="card"><h3>Admin Support</h3><p class="muted">Google Sheets, Excel, data entry, internet research and basic Canva.</p></div>
-</div>
-</section>
+  <section id="about">
+    <div class="wrap">
+      <h2>About me</h2>
+      <div class="about">
+        <div>
+          <p>I'm Sunila Abid, a junior GoHighLevel and CRM virtual assistant working under the name Sunila CRM Solutions.</p>
+          <p>My focus is the everyday CRM work that keeps a sales process running: adding and organizing contacts, moving leads through pipeline stages, tracking follow-ups, and setting up forms and calendars.</p>
+          <p>I am building my experience through hands-on demo projects, which are labelled DEMO on this page.</p>
+        </div>
+        <ul class="facts">
+          <li><span>Name</span><b>Sunila Abid</b></li>
+          <li><span>Brand</span><b>Sunila CRM Solutions</b></li>
+          <li><span>Role</span><b>Junior GHL &amp; CRM Virtual Assistant</b></li>
+          <li><span>Location</span><b>Karachi, Pakistan</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section id="services">
-<h2>Services</h2>
-<div class="cards">
-<div class="card"><h3>GHL & CRM Support</h3><p class="muted">CRM updates, pipelines, contact management and basic workflow support.</p></div>
-<div class="card"><h3>Lead Management</h3><p class="muted">Lead research, list organization, data cleaning and follow-up tracking.</p></div>
-<div class="card"><h3>Virtual Assistance</h3><p class="muted">Data entry, online research, spreadsheets and administrative tasks.</p></div>
-</div>
-</section>
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="lead">What I can help with today.</p>
+      <div class="skills">
+        <div class="skill"><h3>GoHighLevel CRM management</h3><p>Day-to-day account upkeep, so your CRM stays tidy and usable.</p></div>
+        <div class="skill"><h3>Contact and pipeline management</h3><p>Organizing contacts and moving opportunities through clear pipeline stages.</p></div>
+        <div class="skill"><h3>Lead tracking and follow-ups</h3><p>Keeping track of every lead and what needs to happen next.</p></div>
+        <div class="skill"><h3>Forms and calendar setup</h3><p>Lead capture forms and booking calendars connected to your pipeline.</p></div>
+        <div class="skill"><h3>Basic workflow automation</h3><p>Simple automations for routine steps in lead handling.</p></div>
+        <div class="skill"><h3>HubSpot CRM</h3><p>Contact and deal management in HubSpot.</p></div>
+        <div class="skill"><h3>B2B lead research and list building</h3><p>Finding and organizing prospect lists for outreach.</p></div>
+        <div class="skill"><h3>Google Sheets and data entry</h3><p>Accurate data entry and clean, well-organized spreadsheets.</p></div>
+      </div>
+    </div>
+  </section>
 
-<section id="projects">
-<h2>Selected Projects</h2>
-<div class="cards">
-<div class="card"><h3>HVAC CRM Pipeline</h3><p class="muted">A practical/demo pipeline showing lead stages from New Lead to Appointment Booked and Job Completed.</p></div>
-<div class="card"><h3>HVAC Lead Capture Funnel</h3><p class="muted">A demo landing page and form concept for collecting service inquiries.</p></div>
-<div class="card"><h3>Roofing Promotion Funnel</h3><p class="muted">A demo promotional landing page concept with a thank-you page.</p></div>
-<div class="card"><h3>Workflow Practice</h3><p class="muted">Practice with follow-up workflows, triggers and filters in GoHighLevel.</p></div>
-</div>
-<p class="muted">These examples include practical and demo work. They are not presented as multiple live client projects.</p>
-<a class="btn" href="https://drive.google.com/drive/folders/17KQeTl76iXPZddVIQBDKib1uV4z9ZHf-?usp=sharing">See Work Samples</a>
-</section>
+  <section id="work">
+    <div class="wrap">
+      <h2>Demo projects</h2>
+      <p class="lead">Both projects below are sample builds I created for practice. They are DEMO projects, not client work.</p>
 
-<section>
-<h2>Experience</h2>
-<div class="card">
-<h3>Lead Generation & CRM Support</h3>
-<p class="muted">Sunila CRM Solutions | Remote</p>
-<ul>
-<li>GoHighLevel and HubSpot CRM support.</li>
-<li>Pipeline and contact organization.</li>
-<li>B2B prospect research and lead list cleaning.</li>
-<li>Outreach coordination and tracking using spreadsheets.</li>
-</ul>
-</div>
-</section>
+      <article class="proj">
+        <div><span class="tag demo">DEMO</span><span class="tag">GoHighLevel</span><h3>HVAC Lead Management Demo</h3></div>
+        <ul>
+          <li><b>Lead pipeline:</b> New Lead, Contacted, Appointment Booked, Job Completed, Closed Won, Closed Lost.</li>
+          <li><b>Calendar:</b> Free HVAC Estimate Call calendar for booking appointments.</li>
+          <li><b>Lead capture form:</b> collects enquiries so they enter the pipeline.</li>
+        </ul>
+      </article>
+      <article class="proj">
+        <div><span class="tag demo">DEMO</span><span class="tag">GoHighLevel</span><h3>True North Roofing Demo</h3></div>
+        <ul>
+          <li><b>Landing page:</b> Spring Special page for a roofing business.</li>
+          <li><b>Offer:</b> Tax Refund Match up to $1000.</li>
+          <li><b>Lead capture and thank-you page:</b> a form to collect leads, followed by a thank-you page.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
-<section id="contact">
-<h2>Let's Connect</h2>
-<p class="muted">Available for suitable remote and project-based opportunities.</p>
-<p>Email: <a href="mailto:sunilaabid09@gmail.com" style="color:#d6ad60">sunilaabid09@gmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/sunila-smm-expert/" style="color:#d6ad60">View LinkedIn Profile</a></p>
-<a class="btn" href="mailto:sunilaabid09@gmail.com">Send Me an Email</a>
-</section>
+  <section id="process">
+    <div class="wrap">
+      <h2>How I work</h2>
+      <p class="lead">A simple, careful approach to CRM tasks.</p>
+      <ol class="steps">
+        <li><h3>Understand</h3><p>I learn how your leads come in and what happens to them today.</p></li>
+        <li><h3>Set up</h3><p>I organize contacts, pipeline stages, forms and calendars.</p></li>
+        <li><h3>Test</h3><p>I check that forms, bookings and pipeline moves work as expected.</p></li>
+        <li><h3>Track</h3><p>I keep leads and follow-ups up to date.</p></li>
+      </ol>
+    </div>
+  </section>
 
-<footer>© 2026 Sunila Abid | GHL & CRM Support</footer>
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Let's work together</h2>
+        <p>Need help keeping your CRM organized? Send me a message and tell me what you need.</p>
+        <a class="btn" href="mailto:workwithsunila@gmail.com">workwithsunila@gmail.com</a>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/sunila-smm-expert/" target="_blank" rel="noopener">LinkedIn</a>
+          <span>Karachi, Pakistan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="yr"></span> Sunila Abid | Sunila CRM Solutions</div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var cols=[].slice.call(document.querySelectorAll('.col')),
+      log=document.getElementById('log'),
+      msgs=['Demo only: a sample lead appears in New Lead.',
+            'Demo only: the sample lead is moved to Contacted.',
+            'Demo only: the sample lead is moved to Appointment Booked.',
+            'Demo only: the sample lead is moved to Job Completed.',
+            'Demo only: the sample lead is moved to Closed Won.'],
+      timers=[],card;
+  function seed(){
+    cols.forEach(function(c){[].slice.call(c.querySelectorAll('.card')).forEach(function(n){n.remove()})});
+    [['Sample Lead A','Demo data',1],['Sample Lead B','Demo data',2],['Sample Lead C','Demo data',5]].forEach(function(d){
+      var e=document.createElement('div');e.className='card';e.innerHTML=d[0]+'<small>'+d[1]+'</small>';cols[d[2]].appendChild(e);
+    });
+    card=document.createElement('div');card.className='card live';card.innerHTML='New sample lead<small>Demo data</small>';cols[0].appendChild(card);
+  }
+  function run(){
+    timers.forEach(clearTimeout);timers=[];seed();log.textContent=msgs[0];
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches){cols[4].appendChild(card);log.textContent=msgs[4];return}
+    [1,2,3,4].forEach(function(i){timers.push(setTimeout(function(){cols[i].appendChild(card);log.textContent=msgs[i]},i*1500))});
+  }
+  document.getElementById('replay').addEventListener('click',run);
+  run();
+})();
+</script>
 </body>
 </html>
